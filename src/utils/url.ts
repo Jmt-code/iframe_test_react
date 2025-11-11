@@ -33,10 +33,21 @@ export const isValidUrl = (url: string): boolean => {
 
 /**
  * Gets URL parameter from current window location
+ * Extracts only the first occurrence to preserve destination URL parameters
  * @param param - The parameter name to retrieve
  * @returns The parameter value or null
  */
 export const getUrlParameter = (param: string): string | null => {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
+  const search = window.location.search;
+  if (!search) return null;
+  
+  // Find the first occurrence of the parameter
+  const paramPattern = new RegExp(`[?&]${param}=([^&]*)`);
+  const match = search.match(paramPattern);
+  
+  if (!match) return null;
+  
+  // Decode the URL parameter
+  // This will preserve any query parameters in the destination URL
+  return decodeURIComponent(match[1]);
 };
