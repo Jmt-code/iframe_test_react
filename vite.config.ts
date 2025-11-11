@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VERCEL ? '/' : '/iframe_test/',
+  base: process.env.VERCEL ? '/' : '/iframe_test_react/',
 })
