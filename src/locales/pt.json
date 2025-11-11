@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "app": {
+      "title": "Visualizador Iframe Móvel"
+    },
+    "ui": {
+      "enterUrl": "Digite a URL",
+      "urlPlaceholder": "Digite a URL (ex., example.com)",
+      "loadButton": "Carregar",
+      "deviceLabel": "Dispositivo:",
+      "openButton": "Abrir",
+      "portrait": "Retrato",
+      "landscape": "Paisagem"
+    },
+    "modal": {
+      "title": "Digite a URL"
+    },
+    "messages": {
+      "emptyStateTitle": "📱 Visualizador Iframe Móvel",
+      "emptyStateMessage": "Digite uma URL acima para começar",
+      "errorMessage": "Erro ao carregar o site. Pode estar bloqueado por X-Frame-Options."
+    },
+    "devices": {
+      "custom": "Personalizado"
+    },
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "zh": "中文",
+      "ru": "Русский",
+      "pt": "Português",
+      "ja": "日本語"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "app": {
+      "title": "移动 Iframe 查看器"
+    },
+    "ui": {
+      "enterUrl": "输入网址",
+      "urlPlaceholder": "输入网址（例如 example.com）",
+      "loadButton": "加载",
+      "deviceLabel": "设备：",
+      "openButton": "打开",
+      "portrait": "竖屏",
+      "landscape": "横屏"
+    },
+    "modal": {
+      "title": "输入网址"
+    },
+    "messages": {
+      "emptyStateTitle": "📱 移动 Iframe 查看器",
+      "emptyStateMessage": "在上方输入网址以开始",
+      "errorMessage": "加载网站时出错。它可能被 X-Frame-Options 阻止。"
+    },
+    "devices": {
+      "custom": "自定义"
+    },
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "zh": "中文",
+      "ru": "Русский",
+      "pt": "Português",
+      "ja": "日本語"
+    }
+  }
+}

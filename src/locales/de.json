@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "app": {
+      "title": "Mobile Iframe-Betrachter"
+    },
+    "ui": {
+      "enterUrl": "URL eingeben",
+      "urlPlaceholder": "URL eingeben (z.B. example.com)",
+      "loadButton": "Laden",
+      "deviceLabel": "Gerät:",
+      "openButton": "Öffnen",
+      "portrait": "Hochformat",
+      "landscape": "Querformat"
+    },
+    "modal": {
+      "title": "URL eingeben"
+    },
+    "messages": {
+      "emptyStateTitle": "📱 Mobile Iframe-Betrachter",
+      "emptyStateMessage": "Geben Sie oben eine URL ein, um zu beginnen",
+      "errorMessage": "Fehler beim Laden der Seite. Sie könnte durch X-Frame-Options blockiert sein."
+    },
+    "devices": {
+      "custom": "Benutzerdefiniert"
+    },
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "zh": "中文",
+      "ru": "Русский",
+      "pt": "Português",
+      "ja": "日本語"
+    }
+  }
+}

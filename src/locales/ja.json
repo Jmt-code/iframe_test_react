@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "app": {
+      "title": "モバイル Iframe ビューア"
+    },
+    "ui": {
+      "enterUrl": "URLを入力",
+      "urlPlaceholder": "URLを入力（例：example.com）",
+      "loadButton": "読み込む",
+      "deviceLabel": "デバイス：",
+      "openButton": "開く",
+      "portrait": "縦向き",
+      "landscape": "横向き"
+    },
+    "modal": {
+      "title": "URLを入力"
+    },
+    "messages": {
+      "emptyStateTitle": "📱 モバイル Iframe ビューア",
+      "emptyStateMessage": "上にURLを入力して開始してください",
+      "errorMessage": "サイトの読み込みエラー。X-Frame-Optionsによってブロックされている可能性があります。"
+    },
+    "devices": {
+      "custom": "カスタム"
+    },
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "zh": "中文",
+      "ru": "Русский",
+      "pt": "Português",
+      "ja": "日本語"
+    }
+  }
+}
