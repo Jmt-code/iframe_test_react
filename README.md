@@ -1,4 +1,4 @@
-# 📱 Mobile Iframe Viewer# 📱 Mobile Iframe Viewer# 📱 Mobile Iframe Viewer (React + TypeScript)# React + TypeScript + Vite
+# 📱 Mobile Iframe Viewer# 📱 Mobile Iframe Viewer# 📱 Mobile Iframe Viewer# 📱 Mobile Iframe Viewer (React + TypeScript)# React + TypeScript + Vite
 
 
 
@@ -10,11 +10,19 @@ A modern, responsive web application for previewing websites in different mobile
 
 
 
+### Production (Vercel)
+
+**[https://iframetest-rouge.vercel.app/](https://iframetest-rouge.vercel.app/)**
+
+## 🌐 Live DemoA modern, responsive web application for previewing websites in different mobile device frames with multi-language support.
+
+### GitHub Pages
+
 **[https://jmt-code.github.io/iframe_test_react/](https://jmt-code.github.io/iframe_test_react/)**
 
 
 
-## ✨ Features## ✨ FeaturesReact web application to preview websites in an iframe with mobile device simulation.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features**[https://jmt-code.github.io/iframe_test_react/](https://jmt-code.github.io/iframe_test_react/)**
 
 
 
@@ -22,83 +30,176 @@ A modern, responsive web application for previewing websites in different mobile
 
 - 🔄 Portrait/Landscape orientation toggle
 
-- 📐 Custom resizable device frame- 🎨 Multiple device presets (iPhone, Samsung, Google Pixel, iPad)
+- 📐 Custom resizable device frame## ✨ Features## ✨ FeaturesReact web application to preview websites in an iframe with mobile device simulation.This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 - 🌍 Multi-language support (8 languages)
 
-- 📱 Fully responsive design- 🔄 Portrait/Landscape orientation toggle
+- 📱 Fully responsive design
 
 - ⚡ Built with React + TypeScript + Vite
 
-- 📐 Custom resizable device frame## 🚀 Quick StartCurrently, two official plugins are available:
+- 🎨 Multiple device presets (iPhone, Samsung, Google Pixel, iPad)
 
 ## 🚀 Quick Start
 
-- 🌍 Multi-language support (8 languages)
+- 🔄 Portrait/Landscape orientation toggle
 
 ### Development
 
-```bash- 📱 Fully responsive design
+```bash- 📐 Custom resizable device frame- 🎨 Multiple device presets (iPhone, Samsung, Google Pixel, iPad)
 
 npm install
 
-npm run dev- ⚡ Built with React + TypeScript + Vite
+npm run dev- 🌍 Multi-language support (8 languages)
 
 ```
 
-- 🎯 Best practices and clean architecture```bash- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- 📱 Fully responsive design- 🔄 Portrait/Landscape orientation toggle
 
 ### Build
 
-```bash
+```bash- ⚡ Built with React + TypeScript + Vite
 
 npm run build
 
-```## 🚀 Quick Startnpm install- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```- 📐 Custom resizable device frame## 🚀 Quick StartCurrently, two official plugins are available:
 
 
 
-### Deploy to GitHub Pages
+### Deploy to GitHub Pages## 🚀 Quick Start
 
 ```bash
 
-npm run deploy### Developmentnpm run dev
+npm run deploy- 🌍 Multi-language support (8 languages)
 
 ```
 
-```bash
+### Development
 
 ## 🌐 Supported Languages
 
-npm install```## React Compiler
+```bash- 📱 Fully responsive design
 
 - 🇬🇧 English
 
-- 🇪🇸 Españolnpm run dev
+- 🇪🇸 Españolnpm install
 
 - 🇫🇷 Français
 
-- 🇩🇪 Deutsch```
+- 🇩🇪 Deutschnpm run dev- ⚡ Built with React + TypeScript + Vite
 
 - 🇨🇳 中文
 
-- 🇷🇺 Русский
+- 🇷🇺 Русский```
 
 - 🇧🇷 Português
 
-- 🇯🇵 日本語### BuildOpen: `http://localhost:5173/?url=https://example.com`The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🇯🇵 日本語- 🎯 Best practices and clean architecture```bash- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 
 
 
-## 📱 Supported Devices```bash
+## 📱 Supported Devices### Build
 
 
 
-- iPhone SE (375×667)npm run build
+- iPhone SE (375×667)```bash
 
 - iPhone 12/13 (390×844)
 
-- iPhone 14 Pro Max (430×932)```
+- iPhone 14 Pro Max (430×932)npm run build
+
+- Samsung Galaxy S21 (360×800)
+
+- Samsung Galaxy S21+ (384×854)```## 🚀 Quick Startnpm install- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+- Google Pixel 5 (393×851)
+
+- iPad Mini (768×1024)
+
+- iPad Pro (1024×1366)
+
+- Custom (resizable)### Deploy to GitHub Pages
+
+
+
+## 🛠️ Tech Stack```bash
+
+
+
+- **React 19** - UI librarynpm run deploy### Developmentnpm run dev
+
+- **TypeScript** - Type safety
+
+- **Vite** - Build tool and dev server```
+
+- **react-i18next** - Internationalization
+
+- **CSS3** - Modern styling```bash
+
+
+
+## 📝 Usage## 🌐 Supported Languages
+
+
+
+### Desktop Modenpm install```## React Compiler
+
+1. Enter a URL in the top bar
+
+2. Select a device from the dropdown- 🇬🇧 English
+
+3. Toggle orientation if needed
+
+4. Change language from the selector- 🇪🇸 Españolnpm run dev
+
+
+
+### Mobile Mode- 🇫🇷 Français
+
+1. A modal will appear on load
+
+2. Select your preferred language- 🇩🇪 Deutsch```
+
+3. Enter a URL
+
+4. The iframe will display full screen- 🇨🇳 中文
+
+
+
+### URL Parameter- 🇷🇺 Русский
+
+You can pass a URL via query parameter:
+
+```- 🇧🇷 Português
+
+https://iframetest-rouge.vercel.app/?url=example.com
+
+```- 🇯🇵 日本語### BuildOpen: `http://localhost:5173/?url=https://example.com`The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+
+
+## ⚠️ Limitations
+
+
+
+Some websites block iframe embedding using `X-Frame-Options` header (e.g., Google, Facebook, Twitter). This is a server-side restriction and cannot be bypassed by the application.## 📱 Supported Devices```bash
+
+
+
+## 📄 License
+
+
+
+MIT- iPhone SE (375×667)npm run build
+
+
+
+## 👨‍💻 Author- iPhone 12/13 (390×844)
+
+
+
+Created with ❤️ using React + TypeScript- iPhone 14 Pro Max (430×932)```
+
 
 - Samsung Galaxy S21 (360×800)
 
