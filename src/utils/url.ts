@@ -42,7 +42,8 @@ export const getUrlParameter = (param: string): string | null => {
   if (!search) return null;
   
   // Find the first occurrence of the parameter
-  const paramPattern = new RegExp(`[?&]${param}=([^&]*)`);
+  // Capture everything after 'param=' until the end
+  const paramPattern = new RegExp(`[?&]${param}=(.+)$`);
   const match = search.match(paramPattern);
   
   if (!match) return null;
