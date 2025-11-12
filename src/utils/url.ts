@@ -33,10 +33,33 @@ export const isValidUrl = (url: string): boolean => {
 
 /**
  * Gets URL parameter from current window location
+ * Handles cases where the URL might not be properly encoded
  * @param param - The parameter name to retrieve
  * @returns The parameter value or null
  */
 export const getUrlParameter = (param: string): string | null => {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
+  const search = window.location.search;
+  if (!search) return null;
+  
+  // Find where the param starts
+  const paramPrefix = `${param}=`;
+  const paramIndex = search.indexOf(`?${paramPrefix}`);
+  const paramIndexAlt = search.indexOf(`&${paramPrefix}`);
+  
+  const startIndex = paramIndex !== -1 ? paramIndex + 1 : 
+                     paramIndexAlt !== -1 ? paramIndexAlt + 1 : -1;
+  
+  if (startIndex === -1) return null;
+  
+  // Get everything after "param="
+  const valueStart = startIndex + paramPrefix.length;
+  const value = search.substring(valueStart);
+  
+  // Decode the value (handles both encoded and unencoded URLs)
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    // If decode fails, return as is
+    return value;
+  }
 };
