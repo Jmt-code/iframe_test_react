@@ -95,7 +95,7 @@ export const DeviceFrame = ({
           sandbox={
             useSandbox
               ? 'allow-scripts allow-forms allow-popups allow-modals'
-              : ''
+              : undefined
           }
           allowFullScreen
           loading="lazy"
