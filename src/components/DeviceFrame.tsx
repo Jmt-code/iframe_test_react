@@ -11,6 +11,7 @@ interface DeviceFrameProps {
   isCustomDevice: boolean;
   isLandscape: boolean;
   isMobile: boolean;
+  useSandbox: boolean;
   onToggleOrientation: () => void;
 }
 
@@ -22,6 +23,7 @@ export const DeviceFrame = ({
   isCustomDevice,
   isLandscape,
   isMobile,
+  useSandbox,
   onToggleOrientation,
 }: DeviceFrameProps) => {
   const { t } = useTranslation();
@@ -90,6 +92,11 @@ export const DeviceFrame = ({
         <iframe
           src={currentUrl}
           allow={IFRAME_PERMISSIONS}
+          sandbox={
+            useSandbox
+              ? 'allow-scripts allow-forms allow-popups allow-modals'
+              : undefined
+          }
           allowFullScreen
           loading="lazy"
           title="Preview Frame"

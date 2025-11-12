@@ -19,7 +19,7 @@ function App() {
     setSelectedDevice, 
     toggleOrientation 
   } = useDeviceOrientation(DEVICES[0]);
-  const { inputUrl, currentUrl, setInputUrl, handleLoadClick } = useUrlManager(isMobile);
+  const { inputUrl, currentUrl, useSandbox, setInputUrl, handleLoadClick } = useUrlManager(isMobile);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -68,6 +68,7 @@ function App() {
             isCustomDevice={isCustomDevice}
             isLandscape={isLandscape}
             isMobile={isMobile}
+            useSandbox={useSandbox}
             onToggleOrientation={toggleOrientation}
           />
         ) : !isMobile ? (
