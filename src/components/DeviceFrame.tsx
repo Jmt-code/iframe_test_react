@@ -91,7 +91,7 @@ export const DeviceFrame = ({
       <div className="iframe-container" style={{ height: iframeHeight }}>
         <iframe
           src={currentUrl}
-          allow={IFRAME_PERMISSIONS}
+          allow={useSandbox ? undefined : IFRAME_PERMISSIONS}
           sandbox={
             useSandbox
               ? 'allow-scripts allow-forms allow-popups allow-modals'
