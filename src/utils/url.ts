@@ -41,7 +41,31 @@ export const getUrlParameter = (param: string): string | null => {
   const search = window.location.search;
   if (!search) return null;
   
-  // Find where the param starts
+  // Special handling for 'url' parameter - get everything after 'url='
+  if (param === 'url') {
+    const paramPrefix = `${param}=`;
+    const paramIndex = search.indexOf(`?${paramPrefix}`);
+    const paramIndexAlt = search.indexOf(`&${paramPrefix}`);
+    
+    const startIndex = paramIndex !== -1 ? paramIndex + 1 : 
+                       paramIndexAlt !== -1 ? paramIndexAlt + 1 : -1;
+    
+    if (startIndex === -1) return null;
+    
+    // Get everything after "url="
+    const valueStart = startIndex + paramPrefix.length;
+    const value = search.substring(valueStart);
+    
+    // Decode the value (handles both encoded and unencoded URLs)
+    try {
+      return decodeURIComponent(value);
+    } catch {
+      // If decode fails, return as is
+      return value;
+    }
+  }
+  
+  // For other parameters, use standard extraction (stop at & or end)
   const paramPrefix = `${param}=`;
   const paramIndex = search.indexOf(`?${paramPrefix}`);
   const paramIndexAlt = search.indexOf(`&${paramPrefix}`);
@@ -51,11 +75,14 @@ export const getUrlParameter = (param: string): string | null => {
   
   if (startIndex === -1) return null;
   
-  // Get everything after "param="
+  // Get value until next & or end of string
   const valueStart = startIndex + paramPrefix.length;
-  const value = search.substring(valueStart);
+  const nextAmpersand = search.indexOf('&', valueStart);
+  const value = nextAmpersand !== -1 
+    ? search.substring(valueStart, nextAmpersand)
+    : search.substring(valueStart);
   
-  // Decode the value (handles both encoded and unencoded URLs)
+  // Decode the value
   try {
     return decodeURIComponent(value);
   } catch {
