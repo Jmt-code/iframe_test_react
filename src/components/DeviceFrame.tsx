@@ -91,11 +91,11 @@ export const DeviceFrame = ({
       <div className="iframe-container" style={{ height: iframeHeight }}>
         <iframe
           src={currentUrl}
-          allow={useSandbox ? undefined : IFRAME_PERMISSIONS}
+          allow={useSandbox ? IFRAME_PERMISSIONS : undefined}
           sandbox={
             useSandbox
               ? 'allow-scripts allow-forms allow-popups allow-modals'
-              : undefined
+              : ''
           }
           allowFullScreen
           loading="lazy"
