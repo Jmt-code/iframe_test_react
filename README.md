@@ -208,6 +208,4 @@ MIT
 
 ## 👨‍💻 Author
 
-Created by **Juan Manuel Torres (Jmt-code)**  using React + TypeScript
-
-[![GitHub](https://img.shields.io/badge/GitHub-Jmt--code-181717?style=flat&logo=github)](https://github.com/Jmt-code)
+Created by [Jmt-code](https://github.com/Jmt-code) using React + TypeScript
