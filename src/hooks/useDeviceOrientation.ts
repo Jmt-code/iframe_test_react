@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import type { Device } from '../types';
 
 interface UseDeviceOrientationReturn {
@@ -15,20 +15,9 @@ export const useDeviceOrientation = (initialDevice: Device): UseDeviceOrientatio
   const [selectedDevice, setSelectedDevice] = useState<Device>(initialDevice);
   const [isLandscape, setIsLandscape] = useState(false);
 
-  const isCustomDevice = useMemo(() => 
-    selectedDevice.name === 'Custom', 
-    [selectedDevice]
-  );
-
-  const currentWidth = useMemo(() => 
-    isLandscape ? selectedDevice.height : selectedDevice.width,
-    [isLandscape, selectedDevice]
-  );
-
-  const currentHeight = useMemo(() => 
-    isLandscape ? selectedDevice.width : selectedDevice.height,
-    [isLandscape, selectedDevice]
-  );
+  const isCustomDevice = selectedDevice.name === 'Custom';
+  const currentWidth = isLandscape ? selectedDevice.height : selectedDevice.width;
+  const currentHeight = isLandscape ? selectedDevice.width : selectedDevice.height;
 
   const toggleOrientation = () => {
     setIsLandscape(prev => !prev);

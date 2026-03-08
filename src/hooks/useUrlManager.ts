@@ -6,14 +6,20 @@ interface UseUrlManagerReturn {
   currentUrl: string;
   useSandbox: boolean;
   setInputUrl: (url: string) => void;
-  loadUrl: (url: string) => void;
   handleLoadClick: () => void;
 }
 
-export const useUrlManager = (isMobile: boolean): UseUrlManagerReturn => {
+export const useUrlManager = (): UseUrlManagerReturn => {
   const [inputUrl, setInputUrl] = useState('');
   const [currentUrl, setCurrentUrl] = useState('');
   const [useSandbox, setUseSandbox] = useState(false);
+
+  const loadUrl = useCallback((url: string) => {
+    const normalizedUrl = normalizeUrl(url);
+    if (normalizedUrl) {
+      setCurrentUrl(normalizedUrl);
+    }
+  }, []);
 
   useEffect(() => {
     const urlParam = getUrlParameter('url');
@@ -24,17 +30,8 @@ export const useUrlManager = (isMobile: boolean): UseUrlManagerReturn => {
       loadUrl(urlParam);
     }
     
-    // Check if sandbox mode is enabled
     setUseSandbox(sandboxParam === 'true' || sandboxParam === '1');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isMobile]);
-
-  const loadUrl = useCallback((url: string) => {
-    const normalizedUrl = normalizeUrl(url);
-    if (normalizedUrl) {
-      setCurrentUrl(normalizedUrl);
-    }
-  }, []);
+  }, [loadUrl]);
 
   const handleLoadClick = useCallback(() => {
     if (inputUrl.trim()) {
@@ -47,7 +44,6 @@ export const useUrlManager = (isMobile: boolean): UseUrlManagerReturn => {
     currentUrl,
     useSandbox,
     setInputUrl,
-    loadUrl,
     handleLoadClick,
   };
 };

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import type { Device } from '../types';
 import { DEVICES } from '../constants/devices';
+import { getDeviceDisplayName } from '../utils/device';
 
 interface UrlBarProps {
   inputUrl: string;
@@ -28,14 +29,6 @@ export const UrlBar = ({
   const handleDeviceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const index = parseInt(e.target.value);
     onDeviceChange(DEVICES[index]);
-  };
-
-  const getDeviceDisplayName = (device: Device) => {
-    return device.name === 'Custom' ? t('devices.custom') : device.name;
-  };
-
-  const getLanguageName = (code: string) => {
-    return t(`languages.${code}`);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -69,7 +62,7 @@ export const UrlBar = ({
         >
           {DEVICES.map((device, i) => (
             <option key={i} value={i}>
-              {getDeviceDisplayName(device)} ({device.width}×{device.height})
+              {getDeviceDisplayName(device, t)} ({device.width}×{device.height})
             </option>
           ))}
         </select>
@@ -83,7 +76,7 @@ export const UrlBar = ({
         >
           {availableLanguages.map((lang) => (
             <option key={lang} value={lang}>
-              {getLanguageName(lang)}
+              {t(`languages.${lang}`)}
             </option>
           ))}
         </select>

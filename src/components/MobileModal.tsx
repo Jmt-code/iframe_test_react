@@ -19,10 +19,6 @@ export const MobileModal = ({
 }: MobileModalProps) => {
   const { t } = useTranslation();
 
-  const getLanguageName = (code: string) => {
-    return t(`languages.${code}`);
-  };
-
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onLoadClick();
@@ -42,7 +38,7 @@ export const MobileModal = ({
           >
             {availableLanguages.map((lang) => (
               <option key={lang} value={lang}>
-                {getLanguageName(lang)}
+                {t(`languages.${lang}`)}
               </option>
             ))}
           </select>

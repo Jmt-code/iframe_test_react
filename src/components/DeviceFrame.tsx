@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Device } from '../types';
 import { IFRAME_PERMISSIONS } from '../constants/devices';
+import { getDeviceDisplayName } from '../utils/device';
 
 interface DeviceFrameProps {
   device: Device;
@@ -43,10 +44,6 @@ export const DeviceFrame = ({
     return `${currentHeight - 60}px`;
   }, [isMobile, currentHeight]);
 
-  const getDeviceDisplayName = (device: Device) => {
-    return device.name === 'Custom' ? t('devices.custom') : device.name;
-  };
-
   return (
     <div
       className={`device-frame ${isCustomDevice && !isMobile ? 'custom' : ''}`}
@@ -55,7 +52,7 @@ export const DeviceFrame = ({
       {!isMobile && (
         <div className="device-info">
           <span className="device-name">
-            {getDeviceDisplayName(device)} - {currentWidth}×{currentHeight}
+            {getDeviceDisplayName(device, t)} - {currentWidth}×{currentHeight}
           </span>
           <button
             className="btn-orientation"
@@ -99,7 +96,7 @@ export const DeviceFrame = ({
           }
           allowFullScreen
           loading="lazy"
-          title="Preview Frame"
+          title={t('app.title')}
         />
       </div>
     </div>

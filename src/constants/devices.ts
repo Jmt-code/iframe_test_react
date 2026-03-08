@@ -14,6 +14,8 @@ export const DEVICES: readonly Device[] = [
 
 export const MOBILE_BREAKPOINT = 768;
 
+export const AVAILABLE_LANGUAGES = ['en', 'es', 'fr', 'de', 'zh', 'ru', 'pt', 'ja'] as const;
+
 export const IFRAME_PERMISSIONS = 
   'accelerometer; autoplay; camera; clipboard-read; clipboard-write; ' +
   'encrypted-media; fullscreen; geolocation; gyroscope; magnetometer; ' +

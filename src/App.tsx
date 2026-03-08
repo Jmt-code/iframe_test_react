@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { DEVICES } from './constants/devices';
+import { DEVICES, AVAILABLE_LANGUAGES } from './constants/devices';
 import { useDeviceOrientation } from './hooks/useDeviceOrientation';
 import { useResponsive } from './hooks/useResponsive';
 import { useUrlManager } from './hooks/useUrlManager';
@@ -19,7 +19,7 @@ function App() {
     setSelectedDevice, 
     toggleOrientation 
   } = useDeviceOrientation(DEVICES[0]);
-  const { inputUrl, currentUrl, useSandbox, setInputUrl, handleLoadClick } = useUrlManager(isMobile);
+  const { inputUrl, currentUrl, useSandbox, setInputUrl, handleLoadClick } = useUrlManager();
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -39,8 +39,6 @@ function App() {
     i18n.changeLanguage(lang);
   };
 
-  const availableLanguages = ['en', 'es', 'fr', 'de', 'zh', 'ru', 'pt', 'ja'];
-
   return (
     <div className="app-container">
       {/* Desktop URL Bar */}
@@ -49,7 +47,7 @@ function App() {
           inputUrl={inputUrl}
           selectedDevice={selectedDevice}
           currentLang={i18n.language}
-          availableLanguages={availableLanguages}
+          availableLanguages={AVAILABLE_LANGUAGES}
           onInputChange={setInputUrl}
           onLoadClick={handleLoadClick}
           onDeviceChange={setSelectedDevice}
@@ -81,7 +79,7 @@ function App() {
         <MobileModal
           inputUrl={inputUrl}
           currentLang={i18n.language}
-          availableLanguages={availableLanguages}
+          availableLanguages={AVAILABLE_LANGUAGES}
           onInputChange={setInputUrl}
           onLoadClick={handleLoad}
           onLanguageChange={changeLanguage}

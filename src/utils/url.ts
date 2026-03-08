@@ -18,20 +18,6 @@ export const normalizeUrl = (url: string): string | null => {
 };
 
 /**
- * Validates if a string is a valid URL
- * @param url - The URL to validate
- * @returns true if the URL is valid
- */
-export const isValidUrl = (url: string): boolean => {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
-};
-
-/**
  * Gets URL parameter from current window location
  * Handles cases where the URL might not be properly encoded
  * @param param - The parameter name to retrieve

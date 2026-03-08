@@ -4,8 +4,3 @@ export interface Device {
   readonly width: number;
   readonly height: number;
 }
-
-// Component Props Types
-export interface BaseComponentProps {
-  className?: string;
-}
